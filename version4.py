@@ -391,34 +391,3 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"❌ Erreur: {e}")
         print(f"Erreur: {e}")
-
-def batch_structure_text(folder_path: str, output_folder: str = "structured_texts"):
-    """Structure le texte de plusieurs images en lot"""
-    import os
-    from pathlib import Path
-    
-    Path(output_folder).mkdir(exist_ok=True)
-    structurer = IntelligentTextStructurer()
-    
-    supported_extensions = {'.png', '.jpg', '.jpeg', '.tiff', '.bmp'}
-    
-    for filename in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, filename)
-        
-        if Path(filename).suffix.lower() in supported_extensions:
-            try:
-                print(f"Structuration de {filename}...")
-                
-                structured_text = structurer.format_structured_text(file_path)
-                output_filename = f"{Path(filename).stem}_structured.txt"
-                output_path = os.path.join(output_folder, output_filename)
-                
-                with open(output_path, 'w', encoding='utf-8') as f:
-                    f.write(structured_text)
-                
-                print(f"{filename} → {output_filename}")
-                
-            except Exception as e:
-                print(f"Erreur avec {filename}: {e}")
-    
-    print(f"\nTextes structurés sauvegardés dans: {output_folder}")
