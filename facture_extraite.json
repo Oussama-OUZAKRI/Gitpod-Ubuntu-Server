@@ -1,0 +1,32 @@
+{
+  "invoice_number": "506684",
+  "invoice_date": null,
+  "invoice_due_date": null,
+  "vendor_name": "CMI Maroc Telecom",
+  "total_amount": "198.00",
+  "currency": "MAD",
+  "items": [
+    {
+      "name": "0000551853042025",
+      "description": "Num.Facture : 0000551853042025 - Période : 01/03/2025",
+      "quantity": 1,
+      "unit_price": 99.0,
+      "total": 99.0
+    },
+    {
+      "name": "0000546183032025",
+      "description": "Num.Facture : 0000546183032025 - Période : 01/02/2025",
+      "quantity": 1,
+      "unit_price": 198.0,
+      "total": 198.0
+    }
+  ],
+  "category": "Telecom",
+  "tags": [
+    "paiement",
+    "facture",
+    "telecom"
+  ],
+  "status": "paid",
+  "extraction_timestamp": "2025-07-27T23:45:41.291135"
+}
